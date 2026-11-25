@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17392c">
+  <title>Feira Verde | Hortifruti</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="./"><span aria-hidden="true">✿</span> Feira Verde</a>
+      <button id="open-cart" class="cart-button">Minha cesta <span id="count">0</span></button>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1>Da feira para<br>a sua cesta.</h1>
+        <p>Frutas, verduras e legumes para escolher no seu ritmo.</p>
+        <a class="hero-link" href="#catalogo">Ver produtos</a>
+      </div>
+    </section>
+    <section id="catalogo" aria-labelledby="catalog-title">
+      <div class="catalog-head">
+        <h2 id="catalog-title">Na banca</h2>
+        <label class="search">Buscar produtos<input id="search" type="search" placeholder="Ex.: banana, alface"></label>
+      </div>
+      <div id="filters" class="filters" aria-label="Categorias"></div>
+      <p id="empty" hidden>Nenhum produto encontrado.</p>
+      <div id="products" class="products"></div>
+    </section>
+  </main>
+  <footer class="wrap">Feira Verde · Catálogo demonstrativo</footer>
+  <dialog id="cart" aria-labelledby="cart-title">
+    <div class="dialog-head">
+      <h2 id="cart-title">Minha cesta</h2>
+      <form method="dialog"><button class="icon" aria-label="Fechar cesta">×</button></form>
+    </div>
+    <p id="cart-empty">Sua cesta está vazia.</p>
+    <ul id="cart-items"></ul>
+    <div id="cart-summary" hidden>
+      <p class="total"><span>Subtotal</span><strong id="subtotal"></strong></p>
+      <button id="copy" class="primary">Copiar lista da cesta</button>
+      <p id="copy-status" role="status"></p>
+    </div>
+  </dialog>
+  <div id="feedback" class="sr-only" role="status"></div>
+</body>
+</html>
